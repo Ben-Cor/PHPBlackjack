@@ -14,15 +14,7 @@ echo '<!DOCTYPE html>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blackjack Game</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #2c3e50;
-            color: #ecf0f1;
-            margin: 0;
-            padding-left: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <h1 class="mainTitle">Blackjack Game</h1>
