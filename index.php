@@ -18,8 +18,10 @@ echo '<!DOCTYPE html>
     <link rel="icon" href="src/images/blackjack.png" type="image/x-icon">
 </head>
 <body>
-<h1 class="mainTitle">Blackjack Game</h1>
-<img class="mainIcon" src="src/images/blackjack.png" alt="blackjack icon">
+<div class="heading">
+    <h1 class="mainTitle">Blackjack Game</h1>
+    <img class="mainIcon" src="src/images/blackjack.png" alt="blackjack icon">
+</div>
 </br>';
 
 $cardDeck = new Deck();
