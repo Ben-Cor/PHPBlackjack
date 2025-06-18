@@ -15,9 +15,11 @@ echo '<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blackjack Game</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="src/images/blackjack.png" type="image/x-icon">
 </head>
 <body>
 <h1 class="mainTitle">Blackjack Game</h1>
+<img class="mainIcon" src="src/images/blackjack.png" alt="blackjack icon">
 </br>';
 
 $cardDeck = new Deck();
