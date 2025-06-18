@@ -8,6 +8,17 @@ require_once 'src/Deck.php';
 require_once 'src/Hand.php';
 
 
+echo '<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack Game</title>
+    <style>
+    </style>
+</head>';
+
+
 $cardDeck = new Deck();
 
 function newHand(Deck $deck, int $player) {
