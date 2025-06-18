@@ -16,8 +16,10 @@ echo '<!DOCTYPE html>
     <title>Blackjack Game</title>
     <style>
     </style>
-</head>';
-
+</head>
+<body>
+<h1 class="mainTitle">Blackjack Game</h1>
+</br>';
 
 $cardDeck = new Deck();
 
@@ -48,3 +50,7 @@ if ($scorePlayer1 > 21 && $scorePlayer2 > 21) {
 } else {
     echo "</br> <h1>Player 2 wins!</h1>";
 }
+
+echo '
+</body>
+</html>';
