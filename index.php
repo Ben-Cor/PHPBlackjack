@@ -31,7 +31,7 @@ function newHand(Deck $deck, int $player) {
     $hand = $deck->makeHand();
     $score = $hand->calcScore();
     $hand->drawCard($score, $deck);
-    echo "</br> <h3> Player $player </h3>".$hand->displayHand() ;
+    echo "</br> <h3 class='playerName'> Player $player </h3>".$hand->displayHand() ;
     echo "Player $player score is ".$hand->calcScore()."</br></br>";
     $score = $hand->calcScore();
     return $score;
