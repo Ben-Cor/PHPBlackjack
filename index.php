@@ -41,17 +41,17 @@ $scorePlayer1 = newHand($cardDeck, 1);
 $scorePlayer2 = newHand($cardDeck, 2);
 
 if ($scorePlayer1 > 21 && $scorePlayer2 > 21) {
-    echo "</br> <h2>It's a draw, both players are bust!</h2>";
+    echo "</br> <h2 class='outcome'>It's a draw, both players are bust!</h2>";
 } elseif ($scorePlayer1 > 21) {
-    echo "</br> <h2>Player 2 wins! Player 1 is bust.</h2>";
+    echo "</br> <h2 class='outcome'>Player 2 wins! Player 1 is bust.</h2>";
 } elseif ($scorePlayer2 > 21) {
-    echo "</br> <h2>Player 1 wins! Player 2 is bust.</h2>";
+    echo "</br> <h2 class='outcome'>Player 1 wins! Player 2 is bust.</h2>";
 } elseif ($scorePlayer1 == $scorePlayer2) {
-    echo "</br> <h2>It is a draw</h2>";
+    echo "</br> <h2 class='outcome'>It is a draw</h2>";
 } elseif ($scorePlayer1 > $scorePlayer2) {
-    echo "</br> <h2>Player 1 wins!</h2>";
+    echo "</br> <h2 class='outcome'>Player 1 wins!</h2>";
 } else {
-    echo "</br> <h2>Player 2 wins!</h2>";
+    echo "</br> <h2 class='outcome'>Player 2 wins!</h2>";
 }
 
 echo '

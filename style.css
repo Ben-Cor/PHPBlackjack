@@ -4,6 +4,10 @@ body {
     color: #ecf0f1;
     margin: 0;
     padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .mainIcon {
@@ -27,4 +31,10 @@ body {
 .playerName {
     font-size: 30px;
     text-decoration: underline;
+}
+
+.outcome {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 50px;
 }
