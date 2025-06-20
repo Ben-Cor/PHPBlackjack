@@ -33,14 +33,24 @@ body {
 
 .playerHand {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
     margin-top: 20px;
+    gap: 5px;
+}
+
+.score {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+    color: goldenrod;
 }
 
 .outcome {
     font-size: 40px;
     font-weight: bold;
     margin-top: 50px;
+    color: red;
 }
