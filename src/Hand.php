@@ -11,7 +11,7 @@ class Hand
         $output = '';
         foreach ($this->hand as $card) {
             $output .= '<div>';
-            $output .= "<p><strong>{$card->name} of {$card->suit} </strong>{$card->score} points</p>";
+            $output .= "<p><strong>{$card->name} of {$card->suit} </strong> - {$card->score} points</p>";
             $output .= '</div>';
         }
         return $output;
