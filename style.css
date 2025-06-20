@@ -52,5 +52,5 @@ body {
     font-size: 40px;
     font-weight: bold;
     margin-top: 50px;
-    color: red;
+    text-shadow: goldenrod 2px 2px 4px;
 }
