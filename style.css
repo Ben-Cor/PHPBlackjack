@@ -4,10 +4,7 @@ body {
     color: #ecf0f1;
     margin: 0;
     padding-left: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
 }
 
 .mainIcon {
@@ -31,6 +28,15 @@ body {
 .playerName {
     font-size: 30px;
     text-decoration: underline;
+    margin: 10px;
+}
+
+.playerHand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
 }
 
 .outcome {
