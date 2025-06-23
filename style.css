@@ -70,3 +70,16 @@ body {
     padding: 5px;
     margin: 10px;
 }
+
+.newGameButton {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: goldenrod;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
