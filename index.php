@@ -39,6 +39,15 @@ function newHand(Deck $deck, int $player) {
     return $score;
 }
 
+echo "<div class='playerCountSelect'>
+<h2 class='playerCountTitle'>Number of Players</h2>
+<button>1</button>
+<button>2</button>
+<button>3</button>
+<button>4</button>
+</div>";
+
+
 $scorePlayer1 = newHand($cardDeck, 1);
 $scorePlayer2 = newHand($cardDeck, 2);
 
