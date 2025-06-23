@@ -57,5 +57,6 @@ if ($scorePlayer1 > 21 && $scorePlayer2 > 21) {
 }
 
 echo '
+<button onclick="window.location.reload()" class="newGameButton">New Game</button>
 </body>
 </html>';
