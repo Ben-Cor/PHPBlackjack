@@ -53,8 +53,10 @@ function newHand(Deck $deck, int $player) {
 <?php
 
 if (isset($_GET['players']) && $_GET['players'] == 2) {
+    echo "<div class='playerHands'>";
     $scorePlayer1 = newHand($cardDeck, 1);
     $scorePlayer2 = newHand($cardDeck, 2);
+    echo "</div>";
 
     if ($scorePlayer1 > 21 && $scorePlayer2 > 21) {
         echo "</br> <h2 class='outcome'>It's a draw, both players are bust!</h2>";
@@ -70,15 +72,19 @@ if (isset($_GET['players']) && $_GET['players'] == 2) {
         echo "</br> <h2 class='outcome'>Player 2 wins!</h2>";
     }
 } elseif (isset($_GET['players']) && $_GET['players'] == 3) {
+    echo "<div class='playerHands'>";
     $scorePlayer1 = newHand($cardDeck, 1);
     $scorePlayer2 = newHand($cardDeck, 2);
     $scorePlayer3 = newHand($cardDeck, 3);
+    echo "</div>";
 
 } elseif (isset($_GET['players']) && $_GET['players'] == 4) {
+    echo "<div class='playerHands'>";
     $scorePlayer1 = newHand($cardDeck, 1);
     $scorePlayer2 = newHand($cardDeck, 2);
     $scorePlayer3 = newHand($cardDeck, 3);
     $scorePlayer4 = newHand($cardDeck, 4);
+    echo "</div>";
 }
 
 echo '
