@@ -102,7 +102,11 @@ if (isset($_GET['players']) && $_GET['players'] == 2) {
         echo "</br> <h2 class='outcome'>Player 2 and Player 3 draw! Player 1 loses.</h2>";
     } else if ($scorePlayer1 <= 21 && ($scorePlayer3 > 21 || $scorePlayer3 < $scorePlayer1 ) && ($scorePlayer2 > 21 || $scorePlayer2 < $scorePlayer1)) {
         echo "</br> <h2 class='outcome'>Player 1 wins! Player 2 and Player 3 lose.</h2>";
-        }
+    } else if ($scorePlayer2 <= 21 && ($scorePlayer1 > 21 || $scorePlayer1 < $scorePlayer2 ) && ($scorePlayer3 > 21 || $scorePlayer3 < $scorePlayer2)) {
+        echo "</br> <h2 class='outcome'>Player 2 wins! Player 1 and Player 3 lose.</h2>";
+    } else if ($scorePlayer3 <= 21 && ($scorePlayer1 > 21 || $scorePlayer1 < $scorePlayer3 ) && ($scorePlayer2 > 21 || $scorePlayer2 < $scorePlayer3)) {
+        echo "</br> <h2 class='outcome'>Player 3 wins! Player 1 and Player 2 lose.</h2>";
+    }
 
 } elseif (isset($_GET['players']) && $_GET['players'] == 4) {
     echo "<div class='playerHands'>";
