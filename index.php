@@ -78,6 +78,9 @@ if (isset($_GET['players']) && $_GET['players'] == 2) {
     $scorePlayer3 = newHand($cardDeck, 3);
     echo "</div>";
 
+    if ($scorePlayer1 > 21 && $scorePlayer2 > 21 && $scorePlayer3 > 21) {
+        echo "</br> <h2 class='outcome'>It's a draw, all players are bust!</h2>";
+
 } elseif (isset($_GET['players']) && $_GET['players'] == 4) {
     echo "<div class='playerHands'>";
     $scorePlayer1 = newHand($cardDeck, 1);
