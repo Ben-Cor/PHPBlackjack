@@ -1,7 +1,7 @@
 <?php
 
 class Game_logic {
-    public function getOutcome(int $playerCount, array $scores): string {
+    public static function getOutcome(int $playerCount, array $scores): string {
         $busts = array_filter($scores, fn($s) => $s > 21);
         $validScores = array_filter($scores, fn($s) => $s <= 21);
 

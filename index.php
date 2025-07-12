@@ -3,9 +3,11 @@
 declare(strict_types=1);
 
 use src\Deck;
+use src\Game_logic;
 
 require_once 'src/Deck.php';
 require_once 'src/Hand.php';
+require_once 'src/Game_logic.php';
 
 
 echo '<!DOCTYPE html>
@@ -58,19 +60,9 @@ if (isset($_GET['players']) && $_GET['players'] == 2) {
     $scorePlayer2 = newHand($cardDeck, 2);
     echo "</div>";
 
-    if ($scorePlayer1 > 21 && $scorePlayer2 > 21) {
-        echo "</br> <h2 class='outcome'>It's a draw, both players are bust!</h2>";
-    } elseif ($scorePlayer1 > 21) {
-        echo "</br> <h2 class='outcome'>Player 2 wins! Player 1 is bust.</h2>";
-    } elseif ($scorePlayer2 > 21) {
-        echo "</br> <h2 class='outcome'>Player 1 wins! Player 2 is bust.</h2>";
-    } elseif ($scorePlayer1 == $scorePlayer2) {
-        echo "</br> <h2 class='outcome'>It is a draw</h2>";
-    } elseif ($scorePlayer1 > $scorePlayer2) {
-        echo "</br> <h2 class='outcome'>Player 1 wins!</h2>";
-    } else {
-        echo "</br> <h2 class='outcome'>Player 2 wins!</h2>";
-    }
+    $scores = [$scorePlayer1, $scorePlayer2];
+    echo "<h2 class='outcome'>" . \Game_logic::getOutcome(2, $scores). "</h2>";
+
 } elseif (isset($_GET['players']) && $_GET['players'] == 3) {
     echo "<div class='playerHands'>";
     $scorePlayer1 = newHand($cardDeck, 1);
