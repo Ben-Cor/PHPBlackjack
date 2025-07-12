@@ -115,6 +115,24 @@ if (isset($_GET['players']) && $_GET['players'] == 2) {
     $scorePlayer3 = newHand($cardDeck, 3);
     $scorePlayer4 = newHand($cardDeck, 4);
     echo "</div>";
+
+    if ($scorePlayer1 > 21 && $scorePlayer2 > 21 && $scorePlayer3 > 21 && $scorePlayer4 > 21) {
+        echo "</br> <h2 class='outcome'>It's a draw, all players are bust!</h2>";
+    } elseif ($scorePlayer1 > 21 && $scorePlayer2 > 21 && $scorePlayer3 > 21 && $scorePlayer4 <= 21) {
+        echo "</br> <h2 class='outcome'>Player 4 wins! Players 1, 2 and 3 are bust.</h2>";
+    } elseif ($scorePlayer1 > 21 && $scorePlayer2 > 21 && $scorePlayer3 <= 21 && $scorePlayer4 > 21) {
+        echo "</br> <h2 class='outcome'>Player 3 wins! Players 1, 2 and 4 are bust.</h2>";
+    } elseif ($scorePlayer1 > 21 && $scorePlayer2 <= 21 && $scorePlayer3 > 21 && $scorePlayer4 > 21) {
+        echo "</br> <h2 class='outcome'>Player 2 wins! Players 1, 3 and 4 are bust.</h2>";
+    } elseif ($scorePlayer2 > 21 && $scorePlayer3 > 21 && $scorePlayer4 <= 21 && $scorePlayer1 <= 21) {
+        echo "</br> <h2 class='outcome'>Player 1 wins! Players 2, 3 and 4 are bust.</h2>";
+    } elseif ($scorePlayer1 == $scorePlayer2 && $scorePlayer1 == $scorePlayer3 && $scorePlayer1 == $scorePlayer4) {
+        echo "</br> <h2 class='outcome'>It is a draw</h2>";
+    } elseif ($scorePlayer1 > $scorePlayer2 && $scorePlayer1 > $scorePlayer3 && $scorePlayer1 > $scorePlayer4 && $scorePlayer1 <= 21) {
+        echo "</br> <h2 class='outcome'> Player 1 wins!</h2>";
+    } elseif ($scorePlayer2 > $scorePlayer1 && $scorePlayer2 > $scorePlayer3 && $scorePlayer2 > $scorePlayer4 && $scorePlayer2 <= 21) {
+        echo "</br> <h2 class='outcome'> Player 2 wins!</h2>";
+    }
 }
 
 echo '
